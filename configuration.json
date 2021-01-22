@@ -1,30 +1,22 @@
 {
    "Fwg_IoTHub_cred":
    {
+
      "username": "Enter your Fogwing IoTHub username",
      "password": "Enter your Fogwing IoTHub password"
+
    },
-
-   "sample_data":
-   {
-     "client_id": "Enter your Fogwing IoTHub client_id",
-     "dev_eui": "Enter your Fogwing IoTHub dev_eui",
-
-     "hostname": "iothub.enterprise.fogwing.net",
-     "port": "8883",
-     "topic": "fwent/edge/Enter your Fogwing IoTHub client_id/inbound",
 
      "payload":
      {
-       "Temperature": 32,
-       "DO": 45,
-       "ORP": 1200,
-       "Turbidity": 55,
-       "pH": 4,
-       "Conductivity": 46,
-       "TDS": 700,
-       "battery_level": "95"
+       "Temperature": 23.59,
+       "DO": 89.92,
+       "ORP": 480,
+       "Turbidity": 152,
+       "pH": 7.02,
+       "Conductivity": 1300,
+       "TDS": 452,
+       "battery_level": 89
      }
    }
 
-}
