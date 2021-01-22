@@ -5,7 +5,7 @@ This directory provide three files that sends sample data over Fogwing IoTHub us
 
 ## Fogwing IoT Simulation using API client
 We have provided three files:
-* [fwg_api_client.py](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/Fwg_API_client_simulator.py)
+* [fwg_api_client.py](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/fwg_api_client.py)
 * [configuration.json](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/configuration.json)
 * [requirements.txt](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/requirements.txt)
 
