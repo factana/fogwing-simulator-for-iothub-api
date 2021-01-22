@@ -44,5 +44,5 @@ configure the Fogwing IoTHub credential and modify the sample data as you want.
   you can check all the data within the data storage in the portal.
   
  ### Getting help and finding Fogwing docs
- * [Fogwing Platform Forum]()
+ * [Fogwing Platform Forum](https://enterprise.fogwing.net/)
  * [Fogwing Platform Docs](https://docs.fogwing.io/)
