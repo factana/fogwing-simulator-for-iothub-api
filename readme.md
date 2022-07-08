@@ -46,3 +46,4 @@ configure the Fogwing IoTHub credential and modify the sample data as you want.
  ### Getting help and finding Fogwing docs
  * [Fogwing Platform Forum](https://enterprise.fogwing.net/)
  * [Fogwing Platform Docs](https://docs.fogwing.io/)
+ * Please visit https://www.fogwing.io/industrial-iot-platform/ for more information about Fogwing Industrial IoT Platform.
