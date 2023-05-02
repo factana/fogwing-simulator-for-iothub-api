@@ -1,34 +1,42 @@
 import requests
 import json
-import urllib3
 
-# Disabled Python warnings
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+# Reading configuration file.
+with open('configuration.json', 'r') as cred_file:
+    cred = json.loads(cred_file.read())
+
+config = cred.get("FW_CRED")
+user_name = config.get("USERNAME")
+password = config.get("PASSWORD")
 
 
-def send_data_API(user_name, password, sample_data):
-    # URL link for getting API-KEY.
+def get_APItoken():
+    """
+    This function is to generate API token.
+    :returns: API Token
+    :rtype: String
+    """
     credentials = {"username": user_name, "password": password}
-    api_key_url = 'https://enterprise.fogwing.net/api/iothub/getApiToken'
-    resp = requests.post(api_key_url, json=credentials, verify=False)
+    api_token_url = "https://api.fogwing.net/api/v1/iothub/getApiToken"
+    resp = requests.post(api_token_url, json=credentials, verify=True)
     resp_dict = json.loads(resp.text)
-    api_key = resp_dict['token']
+    return resp_dict.get("data").get("token")
 
-    # URL link for posting data over Fogwing IoTHub.
-    header = {"API-TOKEN": api_key}
-    payload_url = 'https://enterprise.fogwing.net/api/iothub/postPayload'
-    payload_resp = requests.post(payload_url, data=json.dumps(sample_data), headers=header, verify=False)
-    print(json.dumps(sample_data, indent=4))
-    print(payload_resp.text)
+
+def send_data_API(payload):
+    """
+    This function is to send data to Fogwing.
+    :param payload: Data to be sent to Fogwing
+    :returns: API Response
+    :rtype: Dict
+    """
+    header = {"Authorization": f"Bearer {get_APItoken()}"}
+    payload_url = "https://api.fogwing.net/api/v1/iothub/postPayload"
+    request_resp = requests.post(payload_url, data=json.dumps(payload), headers=header, verify=True)
+    return request_resp.text
 
 
 if __name__ == '__main__':
-    # Reading configuration file.
-    with open('configuration.json', 'r') as file:
-        config = json.load(file)
-    # Fogwing IoTHub credentials
-    usr_name = config['Fwg_IoTHub_cred']['username']
-    psw = config['Fwg_IoTHub_cred']['password']
     # Sample data to send over Fogwing IoTHub.
-    data = config['payload']
-    send_data_API(usr_name, psw, data)
+    data = cred.get("PAYLOAD")
+    print(send_data_API(data))
