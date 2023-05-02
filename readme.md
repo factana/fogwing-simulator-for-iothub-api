@@ -1,49 +1,46 @@
-# _Fogwing IoT Simulator Program for Raspberry Pi using API_
-This directory provide three files that sends sample data over Fogwing IoTHub using API.
+# **_Fogwing IIoT Simulator Program for Raspberry Pi using API_**
+This repository contains three files that enable you to send sample data to Fogwing IoTHub via an API.
 
-**Note that these SDKs are currently in preview and are subject to change.**
+>**Note:** This SDK is subject to change as it is currently in preview.
 
-## Fogwing IoT Simulation using API client
-We have provided three files:
+## **Fogwing IIoT Simulation using API client.**
+
+To simulate data to Fogwing using an API, you will need to download the following files:
 * [fwg_api_client.py](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/fwg_api_client.py)
 * [configuration.json](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/configuration.json)
 * [requirements.txt](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/requirements.txt)
 
-The logic behind the code is to send the sample data over Fogwing
-IoTHub using API client and the **configuration.json** file is to
-configure the Fogwing IoTHub credential and modify the sample data as you want.
+>**Note:** The purpose of the code is to send sample data over Fogwing IoTHub using an API client. To achieve this, you can modify the **configuration.json** file to configure the Fogwing IoTHub credentials and customize the sample data as needed.
 
-## Step:1
-### Python & json file
-* Copy all the files into your Rasberry Pi and 
-  you are good to start ! You now finish with coding part.
-  
-## Step:2
-### Installing the libraries
-* Install all required libraries using pip with our requirements.txt file.
-    ```
-    pip install -r requirements.txt
-    ```
-## Step:3
-### Credentials
-**Note:-** Do the following modification in **configuration.json** file.
-* Enter **username** and **password** of your Fogwing IoTHub access. 
-  
-## Step:4
-### Run and Get Started with Fogwing IoT
-* Now run the file with the below command.
-    ```
-    python fwg_api_client.py
-    ```
-  **Note:-** Provided everything goes in line with the above mentioned instructions,
-         you will be able to see a message that reads 'successfully published' in command line.
+## Here are the steps to follow in order to send data to Fogwing IIoT using an API:
 
-## Step:5
-### Start analyzing your data at Fogwing Platform
-* Now you are ready to analyze your data at [Fogwing Platform](https://enterprise.fogwing.net/) portal,
+### **1. Moving Files.**
+* Move downloaded files to a directory of your choice on your system. Once you have done this, you can proceed with the next steps.
+
+### **2. Installing Libraries** 
+* You can install all the required libraries using pip and the requirements.txt file provided using follwing command.
+
+  - `pip install -r requirements.txt`
+
+### **3. Update Credentials**
+* To update credentials for Fogwing IoTHub access, you need to modify the **configuration.json** file. 
+* Replace the placeholder values of **USERNAME** and **PASSWORD** with your Fogwing IoTHub access credentials and save the file.
+  
+### **4. Run the Program and Get Started with Fogwing IIoT**
+* To run the program, use the following command.
+   - `python fwg_api_client.py`
+
+
+>**Note:** If everything goes according to the instructions mentioned above, you should see `{"statusCode":201,"message":"Created","description":"The Request Has Succeeded","data":"Successfully published"}` message displayed on the Terminal.
+
+### **5. Analyze Your Data on the Fogwing Platform**
+* Now you are ready to analyze your data at [Fogwing Platform](https://portal.fogwing.net/) portal,
   you can check all the data within the data storage in the portal.
   
- ### Getting help and finding Fogwing docs
- * [Fogwing Platform Forum](https://enterprise.fogwing.net/)
- * [Fogwing Platform Docs](https://docs.fogwing.io/)
- * Please visit https://www.fogwing.io/industrial-iot-platform/ for more information about Fogwing Industrial IoT Platform.
+## **Where to Find Help and Resources for Fogwing**
+* [Fogwing Open APIs Docs.](https://api.fogwing.net/)
+* [Fogwing Platform Forum.](https://community.fogwing.io/)
+* [Fogwing Platform Docs.](https://docs.fogwing.io/)
+ 
+
+## Please visit https://www.fogwing.io/industrial-iot-platform/ for more information about Fogwing Industrial IoT Platform. ##
