@@ -1,22 +1,16 @@
 {
-   "Fwg_IoTHub_cred":
-   {
-
-     "username": "Enter your Fogwing IoTHub username",
-     "password": "Enter your Fogwing IoTHub password"
-
-   },
-
-     "payload":
-     {
-       "Temperature": 23.59,
-       "DO": 89.92,
-       "ORP": 480,
-       "Turbidity": 152,
-       "pH": 7.02,
-       "Conductivity": 1300,
-       "TDS": 452,
-       "battery_level": 89
-     }
-   }
-
+  "FW_CRED": {
+    "USERNAME": "fogwing_iothub_username",
+    "PASSWORD": "fogwing_iothub_username"
+  },
+  "PAYLOAD": {
+    "Temperature": 23.59,
+    "DO": 89.92,
+    "ORP": 480,
+    "Turbidity": 152,
+    "pH": 7.02,
+    "Conductivity": 1300,
+    "TDS": 452,
+    "battery_level": 89
+  }
+}
