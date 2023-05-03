@@ -1,42 +1,23 @@
-# **_Fogwing IIoT Simulator Program for Raspberry Pi using API_**
-This repository contains three files that enable you to send sample data to Fogwing IoTHub via an API.
+# **_Fogwing IIoT API Examples_**
 
->**Note:** This SDK is subject to change as it is currently in preview.
-
-## **Fogwing IIoT Simulation using API client.**
-
-To simulate data to Fogwing using an API, you will need to download the following files:
-* [fwg_api_client.py](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/fwg_api_client.py)
-* [configuration.json](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/configuration.json)
-* [requirements.txt](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/requirements.txt)
-
->**Note:** The purpose of the code is to send sample data over Fogwing IoTHub using an API client. To achieve this, you can modify the **configuration.json** file to configure the Fogwing IoTHub credentials and customize the sample data as needed.
-
-## Here are the steps to follow in order to send data to Fogwing IIoT using an API:
-
-### **1. Moving Files.**
-* Move downloaded files to a directory of your choice on your system. Once you have done this, you can proceed with the next steps.
-
-### **2. Installing Libraries** 
-* You can install all the required libraries using pip and the requirements.txt file provided using follwing command.
-
-  - `pip install -r requirements.txt`
-
-### **3. Update Credentials**
-* To update credentials for Fogwing IoTHub access, you need to modify the **configuration.json** file. 
-* Replace the placeholder values of **USERNAME** and **PASSWORD** with your Fogwing IoTHub access credentials and save the file.
-  
-### **4. Run the Program and Get Started with Fogwing IIoT**
-* To run the program, use the following command.
-   - `python fwg_api_client.py`
+## **Overview**
+This repository provides code examples for sending data to the Fogwing IIoT platform using its API. Its purpose is to assist anyone interested in using the API to get started and learn how to send data [Fogwing IIoT](https://portal.fogwing.net/) using either an API Token or an API Key.
 
 
->**Note:** If everything goes according to the instructions mentioned above, you should see `{"statusCode":201,"message":"Created","description":"The Request Has Succeeded","data":"Successfully published"}` message displayed on the Terminal.
+## **Getting Started**
+To get started, you will need to have a Fogwing IIoT account. If you don't have an account already, you can sign up for one on the [Fogwing Portal](https://portal.fogwing.net/).
 
-### **5. Analyze Your Data on the Fogwing Platform**
-* Now you are ready to analyze your data at [Fogwing Platform](https://portal.fogwing.net/) portal,
-  you can check all the data within the data storage in the portal.
-  
+Once you have an account, you can use the examples in this repository to start sending data to the Fogwing IIoT platform using the API.
+
+## **Contents**
+
+This repository contains two folders:
+
+1. [using_API_key](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/using_API_key/): This folder contains example code snippets for sending data to Fogwing IIoT using an API Key.
+2. [using_API_token](https://github.com/factana/fogwing-simulator-for-iothub-api/blob/master/using_API_token/): This folder contains example code snippets for sending data to Fogwing IIoT using an API Token.
+
+Each folder contains a README.md file with instructions on how to send data using the respective authentication method.
+
 ## **Where to Find Help and Resources for Fogwing**
 * [Fogwing Open APIs Docs.](https://api.fogwing.net/)
 * [Fogwing Platform Forum.](https://community.fogwing.io/)

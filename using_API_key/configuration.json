@@ -1,0 +1,17 @@
+{
+  "FW_CRED": {
+    "EDGE_EUI": "edge_EUI",
+    "API_KEY": "fogwing_API_key",
+    "ACCOUNT_ID": "fogwing_account_id"
+  },
+  "PAYLOAD": {
+    "Temperature": 23.59,
+    "DO": 89.92,
+    "ORP": 480,
+    "Turbidity": 152,
+    "pH": 7.02,
+    "Conductivity": 1300,
+    "TDS": 452,
+    "battery_level": 89
+  }
+}
